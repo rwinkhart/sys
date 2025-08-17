@@ -1,0 +1,115 @@
+diff --git a/unix/ztypes_freebsd_386.go b/unix/ztypes_freebsd_386.go
+index 51e13eb0..5212328e 100644
+--- a/unix/ztypes_freebsd_386.go
++++ b/unix/ztypes_freebsd_386.go
+@@ -203,7 +203,8 @@ type Xucred struct {
+ 	Uid     uint32
+ 	Ngroups int16
+ 	Groups  [16]uint32
+-	_       *byte
++	_       byte
++	Pid		uint32
+ }
+ 
+ type Linger struct {
+@@ -268,7 +269,7 @@ const (
+ 	SizeofSockaddrAny      = 0x6c
+ 	SizeofSockaddrUnix     = 0x6a
+ 	SizeofSockaddrDatalink = 0x36
+-	SizeofXucred           = 0x50
++	SizeofXucred           = 0x54
+ 	SizeofLinger           = 0x8
+ 	SizeofIovec            = 0x8
+ 	SizeofIPMreq           = 0x8
+diff --git a/unix/ztypes_freebsd_amd64.go b/unix/ztypes_freebsd_amd64.go
+index d002d8ef..1673b4e8 100644
+--- a/unix/ztypes_freebsd_amd64.go
++++ b/unix/ztypes_freebsd_amd64.go
+@@ -200,7 +200,8 @@ type Xucred struct {
+ 	Uid     uint32
+ 	Ngroups int16
+ 	Groups  [16]uint32
+-	_       *byte
++	_       byte
++	Pid		uint32
+ }
+ 
+ type Linger struct {
+@@ -265,7 +266,7 @@ const (
+ 	SizeofSockaddrAny      = 0x6c
+ 	SizeofSockaddrUnix     = 0x6a
+ 	SizeofSockaddrDatalink = 0x36
+-	SizeofXucred           = 0x58
++	SizeofXucred           = 0x54
+ 	SizeofLinger           = 0x8
+ 	SizeofIovec            = 0x10
+ 	SizeofIPMreq           = 0x8
+diff --git a/unix/ztypes_freebsd_arm.go b/unix/ztypes_freebsd_arm.go
+index 3f863d89..a54f4570 100644
+--- a/unix/ztypes_freebsd_arm.go
++++ b/unix/ztypes_freebsd_arm.go
+@@ -202,7 +202,8 @@ type Xucred struct {
+ 	Uid     uint32
+ 	Ngroups int16
+ 	Groups  [16]uint32
+-	_       *byte
++	_       byte
++	Pid		uint32
+ }
+ 
+ type Linger struct {
+@@ -267,7 +268,7 @@ const (
+ 	SizeofSockaddrAny      = 0x6c
+ 	SizeofSockaddrUnix     = 0x6a
+ 	SizeofSockaddrDatalink = 0x36
+-	SizeofXucred           = 0x50
++	SizeofXucred           = 0x54
+ 	SizeofLinger           = 0x8
+ 	SizeofIovec            = 0x8
+ 	SizeofIPMreq           = 0x8
+diff --git a/unix/ztypes_freebsd_arm64.go b/unix/ztypes_freebsd_arm64.go
+index 61c72931..a91ccc72 100644
+--- a/unix/ztypes_freebsd_arm64.go
++++ b/unix/ztypes_freebsd_arm64.go
+@@ -200,7 +200,8 @@ type Xucred struct {
+ 	Uid     uint32
+ 	Ngroups int16
+ 	Groups  [16]uint32
+-	_       *byte
++	_       byte
++	Pid		uint32
+ }
+ 
+ type Linger struct {
+@@ -265,7 +266,7 @@ const (
+ 	SizeofSockaddrAny      = 0x6c
+ 	SizeofSockaddrUnix     = 0x6a
+ 	SizeofSockaddrDatalink = 0x36
+-	SizeofXucred           = 0x58
++	SizeofXucred           = 0x54
+ 	SizeofLinger           = 0x8
+ 	SizeofIovec            = 0x10
+ 	SizeofIPMreq           = 0x8
+diff --git a/unix/ztypes_freebsd_riscv64.go b/unix/ztypes_freebsd_riscv64.go
+index b5d17414..596538d9 100644
+--- a/unix/ztypes_freebsd_riscv64.go
++++ b/unix/ztypes_freebsd_riscv64.go
+@@ -200,7 +200,8 @@ type Xucred struct {
+ 	Uid     uint32
+ 	Ngroups int16
+ 	Groups  [16]uint32
+-	_       *byte
++	_       byte
++	Pid		uint32
+ }
+ 
+ type Linger struct {
+@@ -265,7 +266,7 @@ const (
+ 	SizeofSockaddrAny      = 0x6c
+ 	SizeofSockaddrUnix     = 0x6a
+ 	SizeofSockaddrDatalink = 0x36
+-	SizeofXucred           = 0x58
++	SizeofXucred           = 0x54
+ 	SizeofLinger           = 0x8
+ 	SizeofIovec            = 0x10
+ 	SizeofIPMreq           = 0x8
