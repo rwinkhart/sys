@@ -1,17 +1,7 @@
-# sys
+# sys - rwinkhart patches
+This repository holds my custom patches atop the Go sys module.
 
-[![Go Reference](https://pkg.go.dev/badge/golang.org/x/sys.svg)](https://pkg.go.dev/golang.org/x/sys)
+The only changes in the master branch are this README and the patches in the `1patches` directory. The patches are applied on other branches and tagged releases are available for import from the releases page.
 
-This repository holds supplemental Go packages for low-level interactions with
-the operating system.
-
-## Report Issues / Send Patches
-
-This repository uses Gerrit for code changes. To learn how to submit changes to
-this repository, see https://go.dev/doc/contribute.
-
-The git repository is https://go.googlesource.com/sys.
-
-The main issue tracker for the sys repository is located at
-https://go.dev/issues. Prefix your issue with "x/sys:" in the
-subject line, so it is easy to find.
+# How To?
+Copy the desired patch file(s) into a new branch (cloned from upstream master) and apply with `patch -p1 < patchfile.patch`.
